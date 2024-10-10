@@ -1,18 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenuGUI : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	public void OnClickSingleplayer()
+	{
+		SceneManager.LoadScene("Game");
+	}
+	public void OnClickMultiplayer()
+	{
+		Debug.LogWarning("Add Multiplayer late");
+	}
+	public void OnClickQuit()
+	{
+		Application.Quit();
+		Debug.Log("Quit");
+	}
 }
