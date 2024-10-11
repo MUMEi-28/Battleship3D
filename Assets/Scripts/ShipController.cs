@@ -7,7 +7,17 @@ public class ShipController : MonoBehaviour
 	public bool isSelected;
 	public int rotateShipIndex = 0;
 	public float rotationSpeed;
+	public Vector3 originalPosition;
+	public Quaternion originalRotation;
+	public LayerMask shipMask;
 
+	public float boxSize;
+
+	private void Start()
+	{
+		originalPosition = transform.position;
+		originalRotation = transform.rotation;
+	}
 	private void Update()
 	{
 		if (isSelected)
@@ -17,6 +27,32 @@ public class ShipController : MonoBehaviour
 			// Can only rotate if holding a ship
 			RotateShip();
 		}
+	}
+	private void CheckCollisionWithOtherShips()
+	{
+		Collider[] colliders = Physics.OverlapBox(
+			transform.position,
+			new Vector3(boxSize, boxSize, boxSize),
+			transform.rotation,
+			shipMask);
+
+		foreach (Collider collider in colliders)
+		{
+			if (collider.gameObject != this.gameObject)
+			{
+				SnapToOriginalPosition();
+				Debug.Log("Collision detected with another ship, snapping back.");
+				break;
+			}
+		}
+	}
+
+	private void SnapToOriginalPosition()
+	{
+		transform.position = originalPosition;
+		transform.rotation = originalRotation;
+		rotateShipIndex = 0;
+		isSelected = false;
 	}
 	private void MoveWithMouse()
 	{
@@ -69,6 +105,14 @@ public class ShipController : MonoBehaviour
 			default:
 				break;
 		}
+
+	}
+
+
+	private void OnDrawGizmos()
+	{
+		Gizmos.color = Color.white;
+		Gizmos.DrawWireCube(transform.position, new Vector3(boxSize, boxSize, boxSize));
 
 	}
 }

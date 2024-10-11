@@ -10,15 +10,20 @@ public class ShipDragAndDrop : MonoBehaviour
 	[Header("Dragging Ships")]
 	public LayerMask shipMask;
 	public GameObject currentShip;
+	public bool isDragging;
 
 	[Header("Dropping Ships")]
 	public LayerMask tileMask;
 	public GameObject currentTile;
 	public float yOffset;
 
+	[Header("Snapping")]
+	public float snappingSpeed;
+
 	public Material testMaterial;
 
 	public Tiles[] tiles;
+	public Collider currentShipCollider;
 	private void Start()
 	{
 		mainCam = Camera.main;
@@ -27,53 +32,101 @@ public class ShipDragAndDrop : MonoBehaviour
 
 	private void Update()
 	{
-		ray = mainCam.ScreenPointToRay(Input.mousePosition); // Move raycasting here to ensure it's always updated
-		DragShip();
-		DropShip();
-	}
+		ray = mainCam.ScreenPointToRay(Input.mousePosition);
 
+		ray = mainCam.ScreenPointToRay(Input.mousePosition);
+
+		// Check if we're currently dragging a ship
+		if (isDragging)
+		{
+			// Use the tile mask for placement while dragging
+			DropShip();
+		}
+		else if (Physics.Raycast(ray, out hit, Mathf.Infinity, shipMask))
+		{
+			// If not dragging, allow selecting a new ship
+			DragShip();
+		}
+	}
 	private void DropShip()
 	{
 		// Get tile position
-		if (Physics.Raycast(ray, out hit, Mathf.Infinity, tileMask))
+		if (Input.GetMouseButtonDown(0) && currentShip != null)
 		{
-			if (Input.GetMouseButtonDown(0) && currentShip != null)
+			if (Physics.Raycast(ray, out hit, Mathf.Infinity, tileMask))
 			{
+
 				// Make sure that the current tile is not holding any ship
-				foreach (Tiles item in tiles)
+				if (IsCollidingWithOtherShip())
 				{
-					if (item.isHoldingShip)
-					{
-						Debug.Log("ALREADY HAVE A SHIP");
-					}
-					else
-					{
-						item.UpdateIfHoldingASHip();
-
-						// Adjust ship offset to position on the tile
-						currentShip.transform.position = new Vector3(hit.transform.position.x, yOffset, hit.transform.position.z);
-						currentShip.GetComponent<ShipController>().isSelected = false;
-					}
-
+					SnapShipToOriginalPositon();
+					Debug.Log("ALREADY HAVE A SHIP");
+				}
+				else
+				{
+					// Adjust ship offset to position on the tile
+					currentShip.transform.position = new Vector3(hit.transform.position.x, yOffset, hit.transform.position.z);
+					currentShip.GetComponent<ShipController>().isSelected = false;
+					isDragging = false;
 				}
 				Debug.Log("DROPPED A SHIP");
 				currentShip = null;
+				isDragging = false;
+
+			}
+			else
+			{
+				SnapShipToOriginalPositon();
+				Debug.Log("Not within tile map");
 			}
 		}
 	}
+
 
 	private void DragShip()
 	{
-		if (Physics.Raycast(ray, out hit, Mathf.Infinity, shipMask))
+		// Start dragging on mouse click
+		if (Input.GetMouseButtonDown(0))
 		{
-			if (Input.GetMouseButtonDown(0))
-			{
-				GameObject hitObject = hit.collider.gameObject;
+			GameObject hitObject = hit.collider.gameObject;
 
-				hitObject.GetComponent<ShipController>().isSelected = true;
-				currentShip = hitObject;
+			hitObject.GetComponent<ShipController>().isSelected = true;
+			currentShip = hitObject;
 
-			}
+			currentShipCollider = currentShip.GetComponent<Collider>(); // Get the collider of the current ship
+			isDragging = true;
+
+			Debug.Log("STARTED DRAGGING SHIP");
 		}
 	}
+	private bool IsCollidingWithOtherShip()
+	{
+		Collider[] hitColliders = Physics.OverlapBox(currentShipCollider.bounds.center, currentShipCollider.bounds.extents, currentShip.transform.rotation, shipMask);
+
+		// Check if there are any colliders within the ship's space (excluding itself)
+		foreach (Collider col in hitColliders)
+		{
+			if (col.gameObject != currentShip)
+			{
+				return true; // There's a collision with another ship
+			}
+		}
+		return false;
+	}
+	private void SnapShipToOriginalPositon()
+	{
+		// Reset the ship data
+		ShipController ship = currentShip.GetComponent<ShipController>();
+		currentShip.transform.position = ship.originalPosition;
+		currentShip.transform.rotation = ship.originalRotation;
+		ship.rotateShipIndex = 0;
+
+		ship.isSelected = false;
+
+		currentShip = null;
+		isDragging = false;
+
+		Debug.Log("SNAPPED SHIP");
+	}
 }
+

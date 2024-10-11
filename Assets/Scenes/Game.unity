@@ -258,7 +258,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &17545773
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -383,7 +382,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &17864818
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -508,7 +506,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &21148633
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -633,7 +630,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &37656640
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -758,7 +754,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &43643863
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -883,7 +878,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &51149745
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1008,7 +1002,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &56213390
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1133,7 +1126,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &57271726
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1424,7 +1416,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &84212812
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1549,7 +1540,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &85467451
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1674,7 +1664,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &90244248
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1799,7 +1788,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &98642141
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1924,7 +1912,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &111314815
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2049,7 +2036,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &124216439
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2174,7 +2160,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &127638806
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2299,7 +2284,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &140175129
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2424,7 +2408,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &161497888
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2549,7 +2532,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &166560463
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2674,7 +2656,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &169284162
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2799,7 +2780,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &173757506
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2924,7 +2904,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &175673415
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3049,7 +3028,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &183502056
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3174,7 +3152,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &192055647
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3299,7 +3276,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &205237720
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3444,6 +3420,11 @@ MonoBehaviour:
   isSelected: 0
   rotateShipIndex: 0
   rotationSpeed: 20
+  originalPosition: {x: 0, y: 0, z: 0}
+  originalRotation: {x: 0, y: 0, z: 0, w: 0}
+  shipMask:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &223096949
 GameObject:
   m_ObjectHideFlags: 0
@@ -3497,7 +3478,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &223096952
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3622,7 +3602,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &231368605
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3832,12 +3811,15 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   currentShip: {fileID: 0}
+  isDragging: 0
   tileMask:
     serializedVersion: 2
     m_Bits: 128
   currentTile: {fileID: 0}
   yOffset: 1
-  testMaterial: {fileID: 2100000, guid: fa6ce957d40b5c74c9315cce517473da, type: 2}
+  testMaterial: {fileID: 0}
+  tiles: []
+  currentShipCollider: {fileID: 0}
 --- !u!1 &258902895
 GameObject:
   m_ObjectHideFlags: 0
@@ -3891,7 +3873,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &258902898
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4016,7 +3997,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &262551176
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4141,7 +4121,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &292091699
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4288,6 +4267,11 @@ MonoBehaviour:
   isSelected: 0
   rotateShipIndex: 0
   rotationSpeed: 20
+  originalPosition: {x: 0, y: 0, z: 0}
+  originalRotation: {x: 0, y: 0, z: 0, w: 0}
+  shipMask:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &311261164
 GameObject:
   m_ObjectHideFlags: 0
@@ -4341,7 +4325,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &311261167
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4466,7 +4449,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &318098282
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4591,7 +4573,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &325971918
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4716,7 +4697,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &345662247
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4841,7 +4821,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &358475999
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4966,7 +4945,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &364093136
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5091,7 +5069,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &373402974
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5216,7 +5193,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &374857761
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5341,7 +5317,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &384550461
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5466,7 +5441,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &397034821
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5591,7 +5565,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &407939954
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5716,7 +5689,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &417734905
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5841,7 +5813,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &424881431
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6068,6 +6039,11 @@ MonoBehaviour:
   isSelected: 0
   rotateShipIndex: 0
   rotationSpeed: 20
+  originalPosition: {x: 0, y: 0, z: 0}
+  originalRotation: {x: 0, y: 0, z: 0, w: 0}
+  shipMask:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &438630209
 GameObject:
   m_ObjectHideFlags: 0
@@ -6121,7 +6097,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &438630212
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6246,7 +6221,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &446306451
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6371,7 +6345,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &452541016
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6496,7 +6469,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &456327059
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6621,7 +6593,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &459463770
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6746,7 +6717,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &463682682
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6871,7 +6841,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &469394222
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6996,7 +6965,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &488935367
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7121,7 +7089,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &495919400
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7246,7 +7213,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &501535826
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7371,7 +7337,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &509911407
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7496,7 +7461,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &511142098
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7621,7 +7585,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &521742730
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8168,7 +8131,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &545237699
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8376,7 +8338,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &556612125
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8501,7 +8462,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &575749682
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8626,7 +8586,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &580466571
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8834,7 +8793,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &592131375
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8959,7 +8917,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &594963161
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9250,7 +9207,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &610538324
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9375,7 +9331,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &624011030
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9500,7 +9455,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &633209517
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9625,7 +9579,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &634362107
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9750,7 +9703,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &656977791
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9875,7 +9827,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &687545995
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10000,7 +9951,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &696339891
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10125,7 +10075,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &699849426
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10333,7 +10282,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &709502683
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10458,7 +10406,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &714967184
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10583,7 +10530,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &719760185
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10708,7 +10654,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &727502618
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10833,7 +10778,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &742363640
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10958,7 +10902,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &744171568
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11083,7 +11026,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &748632754
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11208,7 +11150,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &757907566
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11333,7 +11274,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &768695674
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11541,7 +11481,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &773771079
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11666,7 +11605,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &788388902
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11791,7 +11729,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &790514497
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11916,7 +11853,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &794826685
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12041,7 +11977,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &799453113
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12166,7 +12101,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &808180953
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12291,7 +12225,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &808282419
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12416,7 +12349,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &813451885
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12541,7 +12473,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &837798343
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12666,7 +12597,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &846523393
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12791,7 +12721,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &865562911
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13053,7 +12982,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &874855816
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13178,7 +13106,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &885061262
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13386,7 +13313,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &897444345
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13511,7 +13437,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &902050082
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13636,7 +13561,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &918762547
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13761,7 +13685,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &926012111
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13886,7 +13809,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &928335030
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14011,7 +13933,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &935524339
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14136,7 +14057,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &938648622
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14261,7 +14181,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &941251283
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14386,7 +14305,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &941310164
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14629,7 +14547,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &993794886
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14754,7 +14671,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1008458016
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14879,7 +14795,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1008962781
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15004,7 +14919,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1025026765
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15129,7 +15043,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1034095594
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15254,7 +15167,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1048405780
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15379,7 +15291,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1049658746
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15504,7 +15415,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1053631475
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15629,7 +15539,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1055132236
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15837,7 +15746,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1111188136
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15962,7 +15870,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1118681960
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16087,7 +15994,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1119182685
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16212,7 +16118,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1120083974
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16337,7 +16242,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1130622667
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16462,7 +16366,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1134838631
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16670,7 +16573,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1142441130
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16795,7 +16697,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1164021389
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17003,7 +16904,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1184495663
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17128,7 +17028,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1193612374
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17253,7 +17152,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1202517892
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17378,7 +17276,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1207142125
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17503,7 +17400,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1225840784
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17628,7 +17524,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1235488679
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17753,7 +17648,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1244987336
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17878,7 +17772,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1259607074
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18003,7 +17896,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1274282735
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18128,7 +18020,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1274831751
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18253,7 +18144,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1277669806
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18378,7 +18268,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1279939110
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18503,7 +18392,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1283336191
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18628,7 +18516,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1297658848
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18753,7 +18640,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1313001105
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18878,7 +18764,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1320508529
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19003,7 +18888,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1342658026
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19128,7 +19012,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1358229449
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19253,7 +19136,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1365182580
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19461,7 +19343,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1365828976
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19586,7 +19467,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1380722671
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19711,7 +19591,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1385676548
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19836,7 +19715,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1399227636
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19961,7 +19839,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1405685313
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20086,7 +19963,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1416706745
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20211,7 +20087,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1418768986
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20336,7 +20211,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1424683258
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20481,6 +20355,11 @@ MonoBehaviour:
   isSelected: 0
   rotateShipIndex: 0
   rotationSpeed: 20
+  originalPosition: {x: 0, y: 0, z: 0}
+  originalRotation: {x: 0, y: 0, z: 0, w: 0}
+  shipMask:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &1451986011
 GameObject:
   m_ObjectHideFlags: 0
@@ -20534,7 +20413,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1451986014
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20659,7 +20537,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1456498140
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20784,7 +20661,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1456825378
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20909,7 +20785,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1459055870
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21034,7 +20909,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1459920242
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21159,7 +21033,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1467337184
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21284,7 +21157,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1474891117
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21409,7 +21281,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1477200732
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21534,7 +21405,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1477726499
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21659,7 +21529,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1492590346
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21784,7 +21653,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1497643500
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21909,7 +21777,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1498325460
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22034,7 +21901,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1499120208
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22159,7 +22025,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1501327714
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22284,7 +22149,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1502705577
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22409,7 +22273,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1512382272
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22534,7 +22397,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1516424203
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22659,7 +22521,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1516565415
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22784,7 +22645,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1532110473
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22909,7 +22769,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1532544973
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23060,6 +22919,11 @@ MonoBehaviour:
   isSelected: 0
   rotateShipIndex: 0
   rotationSpeed: 20
+  originalPosition: {x: 0, y: 0, z: 0}
+  originalRotation: {x: 0, y: 0, z: 0, w: 0}
+  shipMask:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &1560278816
 GameObject:
   m_ObjectHideFlags: 0
@@ -23113,7 +22977,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1560278819
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23238,7 +23101,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1567162397
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23384,6 +23246,11 @@ MonoBehaviour:
   isSelected: 0
   rotateShipIndex: 0
   rotationSpeed: 20
+  originalPosition: {x: 0, y: 0, z: 0}
+  originalRotation: {x: 0, y: 0, z: 0, w: 0}
+  shipMask:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &1581471942
 GameObject:
   m_ObjectHideFlags: 0
@@ -23437,7 +23304,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1581471945
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23562,7 +23428,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1584208480
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23687,7 +23552,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1587678220
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23812,7 +23676,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1590514250
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23937,7 +23800,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1596394847
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24062,7 +23924,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1612248638
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24187,7 +24048,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1614600103
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24312,7 +24172,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1619492339
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24437,7 +24296,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1625292127
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24728,7 +24586,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1632659729
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24853,7 +24710,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1633221112
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24978,7 +24834,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1634508881
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25103,7 +24958,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1660608149
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25228,7 +25082,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1685645581
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25353,7 +25206,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1698286802
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25478,7 +25330,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1699507078
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25686,7 +25537,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1701366713
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25811,7 +25661,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1702990417
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26019,7 +25868,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1713617703
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26144,7 +25992,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1713840307
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26269,7 +26116,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1725470679
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26394,7 +26240,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1730695416
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26519,7 +26364,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1735776285
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26644,7 +26488,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1736652200
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26769,7 +26612,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1769621968
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26894,7 +26736,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1788113187
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27019,7 +26860,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1793403958
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27144,7 +26984,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1825698485
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27269,7 +27108,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1834607211
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27394,7 +27232,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1838339414
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27519,7 +27356,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1843938571
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27644,7 +27480,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1844446517
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27769,7 +27604,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1852332839
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27977,7 +27811,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1864439566
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28268,7 +28101,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1885950320
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28393,7 +28225,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1893674755
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28518,7 +28349,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1899981274
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28643,7 +28473,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1920962722
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28768,7 +28597,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1927940562
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28893,7 +28721,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1941711949
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29018,7 +28845,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1941768996
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29143,7 +28969,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1942603858
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29268,7 +29093,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1957556127
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29393,7 +29217,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1963476691
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29601,7 +29424,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &1967977018
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29975,7 +29797,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &2035755621
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30100,7 +29921,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &2040935278
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30225,7 +30045,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &2057942176
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30433,7 +30252,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &2071636881
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30558,7 +30376,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &2093579738
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30766,7 +30583,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &2102393410
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30891,7 +30707,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &2103667632
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31016,7 +30831,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &2106105930
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31224,7 +31038,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &2132245794
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31349,7 +31162,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &2132286303
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31474,7 +31286,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &2137492615
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31599,7 +31410,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &2138611829
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31724,7 +31534,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &2144991725
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31849,7 +31658,6 @@ MonoBehaviour:
   shipMask:
     serializedVersion: 2
     m_Bits: 64
-  isHoldingShip: 0
 --- !u!65 &2147058447
 BoxCollider:
   m_ObjectHideFlags: 0

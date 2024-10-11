@@ -11,27 +11,12 @@ public class Tiles : MonoBehaviour
 
 	public LayerMask shipMask;
 
-	public bool isHoldingShip;
-
-
 
 	private void FixedUpdate()
 	{
 		ChangeMaterial();
 	}
 
-	public void UpdateIfHoldingASHip()
-	{
-		RaycastHit hit;
-		if (Physics.Raycast(transform.position, transform.up, out hit, 2f, shipMask))
-		{
-			isHoldingShip = true;
-		}
-		else
-		{
-			isHoldingShip = false;
-		}
-	}
 	#region Changing Materials
 	private void ChangeMaterial()
 	{
