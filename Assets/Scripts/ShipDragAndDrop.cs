@@ -16,18 +16,17 @@ public class ShipDragAndDrop : MonoBehaviour
 	public LayerMask tileMask;
 	public GameObject currentTile;
 	public float yOffset;
+	public int placedShips = 0;
 
 	[Header("Snapping")]
 	public float snappingSpeed;
 
-	public Material testMaterial;
+	[Header("GUI")]
+	public ShipPlacingGUI ShipPlacingGUI;
 
-	public Tiles[] tiles;
-	public Collider currentShipCollider;
 	private void Start()
 	{
 		mainCam = Camera.main;
-		tiles = FindObjectsOfType<Tiles>();
 	}
 
 	private void Update()
@@ -41,11 +40,16 @@ public class ShipDragAndDrop : MonoBehaviour
 		{
 			// Use the tile mask for placement while dragging
 			DropShip();
+
+			ShipPlacingGUI.ChangeText("Scroll Wheel To Rotate Ships");
+
 		}
 		else if (Physics.Raycast(ray, out hit, Mathf.Infinity, shipMask))
 		{
 			// If not dragging, allow selecting a new ship
 			DragShip();
+
+			ShipPlacingGUI.ChangeText("Place Your Ships");
 		}
 	}
 	private void DropShip()
@@ -55,7 +59,6 @@ public class ShipDragAndDrop : MonoBehaviour
 		{
 			if (Physics.Raycast(ray, out hit, Mathf.Infinity, tileMask))
 			{
-
 				// Make sure that the current tile is not holding any ship
 				if (currentShip.GetComponent<ShipController>().isCollidingWithShip)
 				{
@@ -91,11 +94,10 @@ public class ShipDragAndDrop : MonoBehaviour
 			hitObject.GetComponent<ShipController>().isSelected = true;
 			currentShip = hitObject;
 
-			currentShipCollider = currentShip.GetComponent<Collider>(); // Get the collider of the current ship
 			isDragging = true;
 		}
 	}
-	
+
 	private void SnapShipToOriginalPositon()
 	{
 		// Reset the ship data
@@ -108,6 +110,31 @@ public class ShipDragAndDrop : MonoBehaviour
 
 		currentShip = null;
 		isDragging = false;
+	}
+
+
+	private void OnTriggerEnter(Collider other)
+	{
+		if (other.CompareTag("Ship"))
+		{
+			placedShips++;
+			if (placedShips > 0)
+			{
+				ShipPlacingGUI.playBtn.gameObject.SetActive(false);
+			}
+		}
+	}
+	private void OnTriggerExit(Collider other)
+	{
+		if (other.CompareTag("Ship"))
+		{
+			placedShips--;
+
+			if (placedShips <= 0)
+			{
+				ShipPlacingGUI.playBtn.gameObject.SetActive(true);
+			}
+		}
 	}
 }
 
