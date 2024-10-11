@@ -11,7 +11,8 @@ public class ShipController : MonoBehaviour
 	public Quaternion originalRotation;
 	public LayerMask shipMask;
 
-	public float boxSize;
+	public bool isCollidingWithShip = false;
+
 
 	private void Start()
 	{
@@ -28,25 +29,6 @@ public class ShipController : MonoBehaviour
 			RotateShip();
 		}
 	}
-	private void CheckCollisionWithOtherShips()
-	{
-		Collider[] colliders = Physics.OverlapBox(
-			transform.position,
-			new Vector3(boxSize, boxSize, boxSize),
-			transform.rotation,
-			shipMask);
-
-		foreach (Collider collider in colliders)
-		{
-			if (collider.gameObject != this.gameObject)
-			{
-				SnapToOriginalPosition();
-				Debug.Log("Collision detected with another ship, snapping back.");
-				break;
-			}
-		}
-	}
-
 	private void SnapToOriginalPosition()
 	{
 		transform.position = originalPosition;
@@ -109,10 +91,29 @@ public class ShipController : MonoBehaviour
 	}
 
 
-	private void OnDrawGizmos()
+	private void OnTriggerEnter(Collider other)
 	{
-		Gizmos.color = Color.white;
-		Gizmos.DrawWireCube(transform.position, new Vector3(boxSize, boxSize, boxSize));
-
+		if (other.gameObject.CompareTag("Ship"))
+		{
+			isCollidingWithShip = true;
+		}
+		
+		print(isCollidingWithShip);
 	}
+	private void OnTriggerStay(Collider other)
+	{
+		if (other.gameObject.CompareTag("Ship"))
+		{
+			isCollidingWithShip = true;
+		}
+	}
+	private void OnTriggerExit(Collider other)
+	{
+		if (other.gameObject.CompareTag("Ship"))
+		{
+			isCollidingWithShip = false;
+		}
+		print(isCollidingWithShip);
+	}
+
 }

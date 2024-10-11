@@ -57,10 +57,9 @@ public class ShipDragAndDrop : MonoBehaviour
 			{
 
 				// Make sure that the current tile is not holding any ship
-				if (IsCollidingWithOtherShip())
+				if (currentShip.GetComponent<ShipController>().isCollidingWithShip)
 				{
 					SnapShipToOriginalPositon();
-					Debug.Log("ALREADY HAVE A SHIP");
 				}
 				else
 				{
@@ -69,7 +68,6 @@ public class ShipDragAndDrop : MonoBehaviour
 					currentShip.GetComponent<ShipController>().isSelected = false;
 					isDragging = false;
 				}
-				Debug.Log("DROPPED A SHIP");
 				currentShip = null;
 				isDragging = false;
 
@@ -95,24 +93,9 @@ public class ShipDragAndDrop : MonoBehaviour
 
 			currentShipCollider = currentShip.GetComponent<Collider>(); // Get the collider of the current ship
 			isDragging = true;
-
-			Debug.Log("STARTED DRAGGING SHIP");
 		}
 	}
-	private bool IsCollidingWithOtherShip()
-	{
-		Collider[] hitColliders = Physics.OverlapBox(currentShipCollider.bounds.center, currentShipCollider.bounds.extents, currentShip.transform.rotation, shipMask);
-
-		// Check if there are any colliders within the ship's space (excluding itself)
-		foreach (Collider col in hitColliders)
-		{
-			if (col.gameObject != currentShip)
-			{
-				return true; // There's a collision with another ship
-			}
-		}
-		return false;
-	}
+	
 	private void SnapShipToOriginalPositon()
 	{
 		// Reset the ship data
@@ -125,8 +108,6 @@ public class ShipDragAndDrop : MonoBehaviour
 
 		currentShip = null;
 		isDragging = false;
-
-		Debug.Log("SNAPPED SHIP");
 	}
 }
 
