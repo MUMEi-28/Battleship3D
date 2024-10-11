@@ -14,36 +14,49 @@ public class Tiles : MonoBehaviour
 	public bool isHoldingShip;
 
 
+
 	private void FixedUpdate()
 	{
 		ChangeMaterial();
 	}
 
+	public void UpdateIfHoldingASHip()
+	{
+		RaycastHit hit;
+		if (Physics.Raycast(transform.position, transform.up, out hit, 2f, shipMask))
+		{
+			isHoldingShip = true;
+		}
+		else
+		{
+			isHoldingShip = false;
+		}
+	}
+	#region Changing Materials
 	private void ChangeMaterial()
 	{
-
-		// Makes sure that it only runs when the player is holding a ship
-		// it should not run all the time for performance issues
-			RaycastHit hit;
-			if (Physics.Raycast(transform.position, transform.up, out hit, 2f, shipMask))
-			{
-				SetOccupiedMaterial();
-			}
-			else
-			{
-				SetUnocupiedMaterial();
-			}
+		RaycastHit hit;
+		if (Physics.Raycast(transform.position, transform.up, out hit, 2f, shipMask))
+		{
+			SetOccupiedMaterial();
+		}
+		else
+		{
+			SetUnocupiedMaterial();
+		}
 	}
-	public void SetUnocupiedMaterial()
+
+	private void SetUnocupiedMaterial()
 	{
 		gameObject.GetComponent<Renderer>().material = unOcuppiedMaterial;
 	}
-	public void SetOccupiedMaterial()
+	private void SetOccupiedMaterial()
 	{
 		gameObject.GetComponent<Renderer>().material = occupiedMaterial;
 	}
-	public void SetExtraSpaceMaterial()
+	private void SetExtraSpaceMaterial()
 	{
 		gameObject.GetComponent <Renderer>().material = extraSpaceMaterial;
 	}
+	#endregion Changing Materials
 }

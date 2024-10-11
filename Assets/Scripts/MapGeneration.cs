@@ -14,7 +14,7 @@ public class MapGeneration : MonoBehaviour
 			for (int j = 0; j < y; j++)
 			{
 				GameObject item = Instantiate(cube, new Vector3(i, 0, j), Quaternion.identity, transform);
-				item.name = i.ToString();
+				item.name = i.ToString() + " " + j.ToString();
 			}
 		}
 	}

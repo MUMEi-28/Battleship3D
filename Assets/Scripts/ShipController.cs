@@ -8,7 +8,6 @@ public class ShipController : MonoBehaviour
 	public int rotateShipIndex = 0;
 	public float rotationSpeed;
 
-
 	private void Update()
 	{
 		if (isSelected)
@@ -17,9 +16,7 @@ public class ShipController : MonoBehaviour
 
 			// Can only rotate if holding a ship
 			RotateShip();
-
 		}
-
 	}
 	private void MoveWithMouse()
 	{
