@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class ShipController : MonoBehaviour
 {
+	[Header("Drag and Drop")]
 	public bool isSelected;
 	public int rotateShipIndex = 0;
 	public float rotationSpeed;
 	public Vector3 originalPosition;
 	public Quaternion originalRotation;
 	public LayerMask shipMask;
-
 	public bool isCollidingWithShip = false;
 
 
@@ -98,7 +98,6 @@ public class ShipController : MonoBehaviour
 			isCollidingWithShip = true;
 		}
 		
-		print(isCollidingWithShip);
 	}
 	private void OnTriggerStay(Collider other)
 	{
@@ -113,7 +112,6 @@ public class ShipController : MonoBehaviour
 		{
 			isCollidingWithShip = false;
 		}
-		print(isCollidingWithShip);
 	}
 
 }
