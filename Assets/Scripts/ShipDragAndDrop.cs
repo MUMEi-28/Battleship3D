@@ -78,7 +78,6 @@ public class ShipDragAndDrop : MonoBehaviour
 			else
 			{
 				SnapShipToOriginalPositon();
-				Debug.Log("Not within tile map");
 			}
 		}
 	}

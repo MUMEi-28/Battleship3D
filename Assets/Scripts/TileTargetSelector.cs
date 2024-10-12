@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class TileTargetSelector : Tiles
 {
+	[Header("Selecting Target")]
 	public bool isPlayerTurn;
 	public LayerMask tileTargetMask;
-
 	private GameObject prevHit;
-
+	[Header("Bomb")]
+	public Bomb bomb;
 	private void Update()
 	{
 		if (isPlayerTurn)
@@ -33,6 +34,12 @@ public class TileTargetSelector : Tiles
 
 					// Update prevHit to the current tile
 					prevHit = currentHit;
+				}
+
+				// Select the tile as the target
+				if(Input.GetMouseButtonDown(0))
+				{
+					bomb.targetPosition = currentHit.transform;
 				}
 			}
 			else
