@@ -17,6 +17,10 @@ public class Bomb : MonoBehaviour
 
 	[Header("Bomb Hit")]
 	public Material tileHitMaterial;
+	public Material shipHitMaterial;
+	public GameObject fireParticles;
+	public GameObject waterSplashParticle;
+
 
 	private void Start()
 	{
@@ -93,20 +97,52 @@ public class Bomb : MonoBehaviour
 
 	private void OnTriggerEnter(Collider other)
 	{
-		// Reposition the bomb when collided with the ship
+		// If the bomb hits an EnemyShip
 		if (other.CompareTag("EnemyShip"))
 		{
+			// Instantiate fire particles at the ship's position
+			Instantiate(fireParticles, other.transform.position, Quaternion.identity);
+
+			// Find the tile underneath the ship and handle it separately
+			GameObject tileBelow = GetTileBelow(other.transform);
+			if (tileBelow != null)
+			{
+				// Change the layer and material for the tile
+				tileBelow.gameObject.layer = LayerMask.NameToLayer("Default");
+				tileBelow.GetComponent<Renderer>().material = shipHitMaterial;
+			}
+
+			// Reset the bomb
 			ResetBomb();
 		}
-		if (other.CompareTag("TargetTile"))
+		// If the bomb directly hits a TargetTile without hitting a ship
+		else if (other.CompareTag("TargetTile"))
 		{
-			other.gameObject.layer = LayerMask.NameToLayer("Default");
+			// Instantiate water splash particle at the tile's position
+			Instantiate(waterSplashParticle, other.transform.position, Quaternion.Euler(-90, 0, 0));
 
+			// Change the layer and material for the tile
+			other.gameObject.layer = LayerMask.NameToLayer("Default");
 			other.GetComponent<Renderer>().material = tileHitMaterial;
+
+			// Reset the bomb
 			ResetBomb();
 		}
 	}
 
+	// Helper method to get the tile below the ship if necessary
+	private GameObject GetTileBelow(Transform shipTransform)
+	{
+		RaycastHit hit;
+		Ray downRay = new Ray(shipTransform.position, Vector3.down);
+		if (Physics.Raycast(downRay, out hit, Mathf.Infinity, LayerMask.GetMask("TargetTiles")))
+		{
+			return hit.collider.gameObject;
+		}
+		return null;
+	}
+
+	// Reposition the bomb when collided with the ship | tile
 	private void ResetBomb()
 	{
 		targetPosition = null;
