@@ -10,6 +10,7 @@ public class TileTargetSelector : Tiles
 	private GameObject prevHit;
 	[Header("Bomb")]
 	public Bomb bomb;
+	public Transform bombTargetHeight;
 	private void Update()
 	{
 		if (isPlayerTurn)
@@ -17,7 +18,7 @@ public class TileTargetSelector : Tiles
 			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 			RaycastHit hit;
 
-			if (Physics.Raycast(ray, out hit, Mathf.Infinity, tileTargetMask))
+			if (Physics.Raycast(ray, out hit, Mathf.Infinity, tileTargetMask))	
 			{
 				// If we hit a new tile, update its material and reset the previous one
 				GameObject currentHit = hit.collider.gameObject;
@@ -36,10 +37,13 @@ public class TileTargetSelector : Tiles
 					prevHit = currentHit;
 				}
 
-				// Select the tile as the target
-				if(Input.GetMouseButtonDown(0))
+				if (Input.GetMouseButtonDown(0))
 				{
+					// Select the tile as the target
 					bomb.targetPosition = currentHit.transform;
+
+					// Position the height of bomb before it go down to target
+					bombTargetHeight.position = new Vector3(currentHit.transform.position.x, 10, currentHit.transform.position.z);
 				}
 			}
 			else
@@ -53,4 +57,5 @@ public class TileTargetSelector : Tiles
 			}
 		}
 	}
+
 }
