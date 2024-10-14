@@ -60,7 +60,6 @@ public class Bomb : MonoBehaviour
 
 		}
 
-
 		if (isAscending && targetPosition != null)
 		{
 			// Look towards the height target while ascending
@@ -95,43 +94,10 @@ public class Bomb : MonoBehaviour
 		}
 	}
 
-	private void OnTriggerEnter(Collider other)
-	{
-		// If the bomb hits an EnemyShip
-		if (other.CompareTag("EnemyShip"))
-		{
-			// Instantiate fire particles at the ship's position
-			Instantiate(fireParticles, other.transform.position, Quaternion.identity);
-
-			// Find the tile underneath the ship and handle it separately
-			GameObject tileBelow = GetTileBelow(other.transform);
-			if (tileBelow != null)
-			{
-				// Change the layer and material for the tile
-				tileBelow.gameObject.layer = LayerMask.NameToLayer("Default");
-				tileBelow.GetComponent<Renderer>().material = shipHitMaterial;
-			}
-
-			// Reset the bomb
-			ResetBomb();
-		}
-		// If the bomb directly hits a TargetTile without hitting a ship
-		else if (other.CompareTag("TargetTile"))
-		{
-			// Instantiate water splash particle at the tile's position
-			Instantiate(waterSplashParticle, other.transform.position, Quaternion.Euler(-90, 0, 0));
-
-			// Change the layer and material for the tile
-			other.gameObject.layer = LayerMask.NameToLayer("Default");
-			other.GetComponent<Renderer>().material = tileHitMaterial;
-
-			// Reset the bomb
-			ResetBomb();
-		}
-	}
+	
 
 	// Helper method to get the tile below the ship if necessary
-	private GameObject GetTileBelow(Transform shipTransform)
+	public GameObject GetTileBelow(Transform shipTransform)
 	{
 		RaycastHit hit;
 		Ray downRay = new Ray(shipTransform.position, Vector3.down);
@@ -143,7 +109,7 @@ public class Bomb : MonoBehaviour
 	}
 
 	// Reposition the bomb when collided with the ship | tile
-	private void ResetBomb()
+	public void ResetBomb()
 	{
 		targetPosition = null;
 		isAscending = true; // Reset for the next shot

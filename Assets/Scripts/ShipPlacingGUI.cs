@@ -10,27 +10,21 @@ public class ShipPlacingGUI : MonoBehaviour
 	public GameObject playBtn;
 
 	[Header("Camera")]
-	private Camera mainCam;
-	public float placingShipCameraSize;
-	public float gameCameraSize;
-	public Transform camGamePosition;
-
-	private void Start()
-	{
-		gameCameraSize = Camera.main.orthographicSize;
-		mainCam = Camera.main;
-	}
-
+	public Camera gameCamera;
+	public Camera placingShipCamera;
+	public GameManager gameManager;
 	public void ChangeText(string text)
 	{
 		notifyText.text = text;	
 	}
 
+	// REPOSITION THE CAMERA AND SET THE GAME STATE TO PLAYER TURN
 	public void OnClickPlay()
 	{
-		mainCam.transform.rotation = camGamePosition.rotation;
-		mainCam.transform.position = camGamePosition.position;
+		placingShipCamera.enabled = false;
+		gameCamera.enabled = true;
 
-		mainCam.orthographicSize = gameCameraSize;
+		gameManager.gameState = GameState.playerTurn;
+		gameManager.UpdateCamera();
 	}
 }
