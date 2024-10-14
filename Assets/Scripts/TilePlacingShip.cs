@@ -5,16 +5,20 @@ using UnityEngine;
 public class TilePlacingShip : Tiles
 {
 	public LayerMask shipMask;
+	public GameManager manager;
 	private void FixedUpdate()
 	{
-		RaycastHit hit;
-		if (Physics.Raycast(transform.position, transform.up, out hit, 2f, shipMask))
+		if (manager.gameState == GameState.placingShip)
 		{
-			SetOccupiedMaterial();
-		}
-		else
-		{
-			SetUnocupiedMaterial();
+			RaycastHit hit;
+			if (Physics.Raycast(transform.position, transform.up, out hit, 2f, shipMask))
+			{
+				SetOccupiedMaterial();
+			}
+			else
+			{
+				SetUnocupiedMaterial();
+			}
 		}
 	}
 }

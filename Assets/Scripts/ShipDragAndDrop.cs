@@ -33,8 +33,6 @@ public class ShipDragAndDrop : MonoBehaviour
 	{
 		ray = mainCam.ScreenPointToRay(Input.mousePosition);
 
-		ray = mainCam.ScreenPointToRay(Input.mousePosition);
-
 		// Check if we're currently dragging a ship
 		if (isDragging)
 		{

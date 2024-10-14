@@ -13,11 +13,12 @@ public enum CurrentPhase
 public class EnemyAi : MonoBehaviour
 {
 	public CurrentPhase currentPhase;
-	public GameObject[] playerTiles;
+	public List<GameObject> playerTiles;
+	public Transform bombTargetHeight;
 
 
 
-	public GameObject bombPrefab;
+	public EnemyBomb enemyBomb;
 	public GameObject chosenTile;
 
 
@@ -32,11 +33,29 @@ public class EnemyAi : MonoBehaviour
 	}
 	public GameObject GuessTile()
 	{
-		int randomTile = Random.Range(0, playerTiles.Length);
+		// Ensure there are still tiles to choose from
+		if (playerTiles.Count == 0)
+		{
+			Debug.Log("No more tiles to guess.");
+			return null;
+		}
 
-		chosenTile = playerTiles[randomTile];
+		// Choose a random tile index
+		int randomTileIndex = Random.Range(0, playerTiles.Count);
 
-		return playerTiles[randomTile];
+		// Get the tile at the random index
+		chosenTile = playerTiles[randomTileIndex];
+
+		// Set the target for the bomb
+		enemyBomb.targetPosition = chosenTile.transform;
+
+		// Position the bomb target right above the target
+		bombTargetHeight.position = new Vector3(chosenTile.transform.position.x, 10, chosenTile.transform.position.z);
+
+		// Remove the chosen tile from the list to prevent guessing it again
+		playerTiles.RemoveAt(randomTileIndex);
+
+		return chosenTile;
 	}
 
 	/*public bool isTileEmpty()

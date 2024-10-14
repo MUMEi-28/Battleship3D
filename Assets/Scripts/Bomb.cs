@@ -97,11 +97,11 @@ public class Bomb : MonoBehaviour
 	
 
 	// Helper method to get the tile below the ship if necessary
-	public GameObject GetTileBelow(Transform shipTransform)
+	public GameObject GetTileBelow(Transform shipTransform, string layerMask)
 	{
 		RaycastHit hit;
 		Ray downRay = new Ray(shipTransform.position, Vector3.down);
-		if (Physics.Raycast(downRay, out hit, Mathf.Infinity, LayerMask.GetMask("TargetTiles")))
+		if (Physics.Raycast(downRay, out hit, Mathf.Infinity, LayerMask.GetMask(layerMask)))
 		{
 			return hit.collider.gameObject;
 		}

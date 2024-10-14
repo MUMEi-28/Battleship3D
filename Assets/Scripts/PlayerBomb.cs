@@ -13,7 +13,7 @@ public class PlayerBomb : Bomb
 			Instantiate(fireParticles, other.transform.position, Quaternion.identity);
 
 			// Find the tile underneath the ship and handle it separately
-			GameObject tileBelow = GetTileBelow(other.transform);
+			GameObject tileBelow = GetTileBelow(other.transform, "TargetTiles");
 			if (tileBelow != null)
 			{
 				// Change the layer and material for the tile
