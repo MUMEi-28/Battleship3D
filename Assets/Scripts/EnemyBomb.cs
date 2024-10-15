@@ -20,6 +20,9 @@ public class EnemyBomb : Bomb
 				// Change the layer and material for the tile
 				tileBelow.gameObject.layer = LayerMask.NameToLayer("Default");
 				tileBelow.GetComponent<Renderer>().material = shipHitMaterial;
+
+				// Set the initial object (EnemyAi)	
+				initialHitObject = hitTile;
 			}
 
 			// Reset the bomb
@@ -34,7 +37,9 @@ public class EnemyBomb : Bomb
 			}
 
 
-			//	enemyAi.RegisterHit();
+			// Add hit count to find out if the ship is vertical or horizontal
+			enemyAi.RegisterHit();
+
 		}
 		// If the bomb directly hits a TargetTile without hitting a ship
 		else if (other.CompareTag("PlayerTiles"))
@@ -50,6 +55,10 @@ public class EnemyBomb : Bomb
 			ResetBomb();
 
 			// If enemy hit a tile then continue guessing
+			if (enemyAi.currentPhase == CurrentPhase.vertical)
+			{
+				enemyAi.RegisterMiss();
+			}
 		}
 	}
 }

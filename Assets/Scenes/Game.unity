@@ -4838,13 +4838,12 @@ MonoBehaviour:
   enemyBomb: {fileID: 2062698459}
   guessTile: {fileID: 0}
   isTileEmpty: 0
-  potentialHits:
-  - {fileID: 1193612371}
-  - {fileID: 744171565}
-  - {fileID: 1313001102}
-  - {fileID: 865562908}
+  potentialHits: []
   potentialTile: {fileID: 0}
   currentHitCount: 0
+  initialHitObject: {fileID: 0}
+  nextHitObject: {fileID: 0}
+  prevHitObject: {fileID: 0}
   hitTest: 0
 --- !u!1 &127638803
 GameObject:

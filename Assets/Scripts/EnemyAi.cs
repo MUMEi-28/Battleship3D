@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using UnityEngine;
 
 
@@ -26,29 +27,31 @@ public class EnemyAi : MonoBehaviour
 	public GameObject potentialTile;
 	public int currentHitCount;
 
+	[Header("Vertical | Horizontal Item")]
+	public GameObject initialHitObject;
+	public GameObject nextHitObject;
+	public GameObject prevHitObject;
+
 	public bool hitTest;
 	private void Update()
 	{
 		if (hitTest)
 		{
 
-				GuessTile();
-		//	ChoosePotentialHit();
+			GuessTile();
+			//	ChoosePotentialHit();
 
 			hitTest = false;
 		}
 	}
+
+	// Returns the most likely tile that have a ship
 	public GameObject GuessTile()
 	{
+
+		// Find a tile 
 		if (currentPhase == CurrentPhase.guessing)
 		{
-			// Ensure there are still tiles to choose from
-			if (playerTiles.Count == 0)
-			{
-				Debug.Log("No more tiles to guess.");
-				return null;
-			}
-
 			// Choose a random tile index
 			int randomTileIndex = Random.Range(0, playerTiles.Count);
 
@@ -69,10 +72,26 @@ public class EnemyAi : MonoBehaviour
 
 			// If the enemy hit a ship then Get the Surrounding Tiles on that hit to guess the next potential hit
 		}
-		else if(currentPhase == CurrentPhase.shipHit) 
+		// Find out weather the ship is horizontal or vertical
+		else if (currentPhase == CurrentPhase.shipHit)
 		{
 			ChoosePotentialHit();
 			return potentialTile;
+		}
+		// Continue hitting vertically
+		else if (currentPhase == CurrentPhase.vertical)
+		{
+			GetVerticalTiles();
+
+			ChoosePotentialHit();
+			print("Vertical");
+			return null;
+		}
+		// Continue hitting horizontally
+		else if (currentPhase == CurrentPhase.horizontal)
+		{
+			print("Horizontal");
+			return null;
 		}
 		else
 		{
@@ -81,11 +100,13 @@ public class EnemyAi : MonoBehaviour
 
 	}
 
-	
+
 
 	// Find the four surrounding tiles of the hit tile (Enemy Bomb)
 	public List<GameObject> GuessPotentialHits(GameObject hitTile)
 	{
+		
+
 
 		// Define directions: Up, Down, Left, Right
 		Vector3[] directions = new Vector3[]
@@ -120,12 +141,12 @@ public class EnemyAi : MonoBehaviour
 		}
 
 		// Print all potential hit game object names
-/*		string potentialHitsNames = "POTENTIAL HITS ARE: ";
-		foreach (GameObject potentialHit in potentialHits)
-		{
-			potentialHitsNames += potentialHit.name + ", ";
-		}
-		Debug.Log(potentialHitsNames);*/
+		/*		string potentialHitsNames = "POTENTIAL HITS ARE: ";
+				foreach (GameObject potentialHit in potentialHits)
+				{
+					potentialHitsNames += potentialHit.name + ", ";
+				}
+				Debug.Log(potentialHitsNames);*/
 
 
 		return potentialHits;
@@ -158,7 +179,7 @@ public class EnemyAi : MonoBehaviour
 
 		if (potentialHits.Count == 0)
 		{
-			currentPhase = CurrentPhase.guessing;
+		//	currentPhase = CurrentPhase.guessing;
 			print("LAST POTENTIAL TILES IS DESTROYED");
 		}
 
@@ -187,6 +208,9 @@ public class EnemyAi : MonoBehaviour
 	// Lock direction based on the hits
 	private void LockDirection()
 	{
+		// Clear the potential tiles when locked
+		potentialHits.Clear();
+
 		Vector3 directionDifference = potentialTile.transform.position - guessTile.transform.position;
 
 		// Determine if the locked direction should be vertical or horizontal
@@ -197,10 +221,56 @@ public class EnemyAi : MonoBehaviour
 		else
 		{
 			currentPhase = CurrentPhase.vertical;
+			GetVerticalTiles();
 		}
 
 		Debug.Log("Locked direction: " + currentPhase);
 	}
+
+
+	private void GetVerticalTiles()
+	{
+		// Define directions: Up, Down
+		Vector3[] directions = new Vector3[]
+		{
+			Vector3.forward, // Up (North)
+            Vector3.back,    // Down (South)
+        };
+
+		// Get the forward and backward tiles
+		foreach (Vector3 direction in directions)
+		{
+			RaycastHit hit;
+			Vector3 startPosition = initialHitObject.transform.position + Vector3.down;
+
+
+			Debug.DrawRay(startPosition, direction, Color.green, 9999f);
+
+			if (Physics.Raycast(startPosition, direction, out hit, 1f, LayerMask.GetMask("PlayerTiles")))
+			{
+				GameObject verticalTiles = hit.collider.gameObject;
+
+				// Check if the tile above or below still exist on the board
+				if (playerTiles.Contains(verticalTiles))
+				{
+					print("ADDED POTENTIAL VERTICAL HITS");
+
+					potentialHits.Add(verticalTiles);
+				}
+					print("Found player tiles near");
+			}
+
+			Debug.Log("Got Vertical Tiles");
+
+		}
+	}
+
+	private void HitHorizontal()
+	{
+
+	}
 }
+
+
 
 
