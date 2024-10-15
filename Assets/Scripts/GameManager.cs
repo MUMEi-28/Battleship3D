@@ -19,7 +19,6 @@ public class GameManager : MonoBehaviour
 	public Camera placingShipCam;
 	public Camera gameCam;
 
-
 	private void Start()
 	{
 		UpdateCamera();

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyBomb : Bomb
 {
+	public EnemyAi enemyAi;
 	private void OnTriggerEnter(Collider other)
 	{
 		// If the bomb hits an EnemyShip
@@ -23,6 +24,17 @@ public class EnemyBomb : Bomb
 
 			// Reset the bomb
 			ResetBomb();
+
+
+			// If enemy hit a ship then guess potential hit
+			if (enemyAi.currentPhase == CurrentPhase.guessing) // Only Get the surrounding tiles if enemy is guessing
+			{
+				enemyAi.GuessPotentialHits(other.transform.gameObject);
+				enemyAi.currentPhase = CurrentPhase.shipHit;
+			}
+
+
+			//	enemyAi.RegisterHit();
 		}
 		// If the bomb directly hits a TargetTile without hitting a ship
 		else if (other.CompareTag("PlayerTiles"))
@@ -36,6 +48,8 @@ public class EnemyBomb : Bomb
 
 			// Reset the bomb
 			ResetBomb();
+
+			// If enemy hit a tile then continue guessing
 		}
 	}
 }
