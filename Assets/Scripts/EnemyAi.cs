@@ -169,6 +169,14 @@ public class EnemyAi : MonoBehaviour
 		// Remove the tile missed tile
 		potentialHits.RemoveAt(randomPotentialTile);
 
+		// If the selected tile exists in the vertical list, remove it from there as well
+		if (verticalList.Contains(potentialTile))
+		{
+			verticalList.Remove(potentialTile);
+			Debug.Log($"Removed {potentialTile.name} from vertical list.");
+		}
+
+
 		if (potentialHits.Count == 0)
 		{
 		//	currentPhase = CurrentPhase.guessing;
@@ -212,7 +220,7 @@ public class EnemyAi : MonoBehaviour
 			currentPhase = CurrentPhase.vertical;
 			Debug.LogWarning("TILES CLEARED ON LOCK DIRECTION");
 
-			GetInitialVerticalTiles();
+	//		GetInitialVerticalTiles();
 			GetVerticalTiles();
 		}
 	}
@@ -256,9 +264,10 @@ public class EnemyAi : MonoBehaviour
 				// Check if the tile above or below still exist on the board
 				if (playerTiles.Contains(verticalTiles))
 				{
-
 					verticalList.Add(verticalTiles);
 				}
+
+
 			}
 		}
 	}
@@ -291,6 +300,14 @@ public class EnemyAi : MonoBehaviour
 				{
 
 					potentialHits.Add(verticalTiles);
+					verticalList.Add(verticalTiles);
+				}
+
+				// If the selected tile exists in the vertical list, remove it from there as well
+				if (verticalList.Contains(potentialTile))
+				{
+					verticalList.Remove(potentialTile);
+					Debug.Log($"Removed {potentialTile.name} from vertical list.");
 				}
 			}
 		}
