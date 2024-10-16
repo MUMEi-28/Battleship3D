@@ -105,9 +105,6 @@ public class EnemyAi : MonoBehaviour
 	// Find the four surrounding tiles of the hit tile (Enemy Bomb)
 	public List<GameObject> GuessPotentialHits(GameObject hitTile)
 	{
-		
-
-
 		// Define directions: Up, Down, Left, Right
 		Vector3[] directions = new Vector3[]
 		{
@@ -241,7 +238,7 @@ public class EnemyAi : MonoBehaviour
 		foreach (Vector3 direction in directions)
 		{
 			RaycastHit hit;
-			Vector3 startPosition = initialHitObject.transform.position + Vector3.down;
+			Vector3 startPosition = initialHitObject.transform.position;
 
 
 			Debug.DrawRay(startPosition, direction, Color.green, 9999f);
