@@ -22,12 +22,24 @@ public class EnemyBomb : Bomb
 				tileBelow.GetComponent<Renderer>().material = shipHitMaterial;
 
 				// Set the initial object (EnemyAi)	
-			//	initialHitObject = hitTile;
-				enemyAi.initialHitObject = tileBelow; 
+			//	enemyAi.initialHitObject = tileBelow;
+
+				if (enemyAi.initialHitObject == null)
+				{
+					enemyAi.initialHitObject = tileBelow;
+					enemyAi.nextGuessTarget = tileBelow;
+					enemyAi.GetInitialVerticalTiles();
+
+					print("SET INITIAL TILES ON NULL INITIAL HIT");
+
+				}
+				else
+				{
+					enemyAi.nextGuessTarget = tileBelow;
+				}
 			}
 
-			// Reset the bomb
-			ResetBomb();
+
 
 
 			// If enemy hit a ship then guess potential hit
@@ -37,9 +49,16 @@ public class EnemyBomb : Bomb
 				enemyAi.currentPhase = CurrentPhase.shipHit;
 			}
 
+			
+
+			// Reset the bomb
+			ResetBomb();
+
 
 			// Add hit count to find out if the ship is vertical or horizontal
 			enemyAi.RegisterHit();
+
+			enemyAi.ResetGuessOnEmptyTile();
 
 		}
 		// If the bomb directly hits a TargetTile without hitting a ship

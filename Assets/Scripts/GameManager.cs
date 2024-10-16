@@ -8,7 +8,6 @@ public enum GameState
 	playerTurn,
 	enemyTurn
 }
-
 public class GameManager : MonoBehaviour
 {
 	public GameState gameState;

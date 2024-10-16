@@ -4842,9 +4842,9 @@ MonoBehaviour:
   potentialTile: {fileID: 0}
   currentHitCount: 0
   initialHitObject: {fileID: 0}
-  nextHitObject: {fileID: 0}
-  prevHitObject: {fileID: 0}
-  hitTest: 0
+  nextGuessTarget: {fileID: 0}
+  verticalList: []
+  hitTest: 1
 --- !u!1 &127638803
 GameObject:
   m_ObjectHideFlags: 0
