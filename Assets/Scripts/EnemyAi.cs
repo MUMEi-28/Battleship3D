@@ -68,20 +68,21 @@ public class EnemyAi : MonoBehaviour
 			playerTiles.RemoveAt(randomTileIndex);
 
 			// If the enemy hit a ship then Get the Surrounding Tiles on that hit to guess the next potential hit
+
+
+			print("GUESS RANDOM");
 		}
 		// Find out weather the ship is horizontal or vertical
 		else if (currentPhase == CurrentPhase.shipHit)
 		{
-			ChoosePotentialHit();
+			ChoosePotentialSurroundingHit();
 		}
 		// Continue hitting vertically
 		else if (currentPhase == CurrentPhase.vertical)
 		{
-			Debug.LogWarning("TILES CLEARED ON UPDATE VERTICAL");
-
 			GetVerticalTiles();
 
-			ChoosePotentialHit();
+			ChooseVerticalSurroundingHit();
 		}
 		// Continue hitting horizontally
 		else if (currentPhase == CurrentPhase.horizontal)
@@ -145,13 +146,14 @@ public class EnemyAi : MonoBehaviour
 	}
 
 	// Choose a tile on the four surrounding hit tile
-	public void ChoosePotentialHit()
+	public void ChoosePotentialSurroundingHit()
 	{
+
+		// Return to guessing and clear out the vertical and horizontal tiles
 		if (potentialHits.Count == 0)
 		{
 			currentPhase = CurrentPhase.guessing;
-			print("NO MORE POTENTIAL TILES");
-
+			verticalList.Clear();
 			return;
 		}
 
@@ -162,28 +164,56 @@ public class EnemyAi : MonoBehaviour
 
 
 		// Home the bomb to the target
-		enemyBomb.targetPosition = potentialTile.transform;
-		bombTargetHeight.position = new Vector3(potentialTile.transform.position.x, 10, potentialTile.transform.position.z);
+		
+			enemyBomb.targetPosition = potentialTile.transform;
+			bombTargetHeight.position = new Vector3(potentialTile.transform.position.x, 10, potentialTile.transform.position.z);
 
+			print("GUESS SURROUNDING");
 
 		// Remove the tile missed tile
 		potentialHits.RemoveAt(randomPotentialTile);
+
+		// Remove the missed tiles on the whole player board too
+		playerTiles.Remove(potentialTile);
 
 		// If the selected tile exists in the vertical list, remove it from there as well
 		if (verticalList.Contains(potentialTile))
 		{
 			verticalList.Remove(potentialTile);
-			Debug.Log($"Removed {potentialTile.name} from vertical list.");
-		}
-
-
-		if (potentialHits.Count == 0)
-		{
-		//	currentPhase = CurrentPhase.guessing;
-			print("LAST POTENTIAL TILES IS DESTROYED");
 		}
 
 		// If you hit more than 2 tiles consecutively in the same direction then continue in that direction
+	}
+	public void ChooseVerticalSurroundingHit()
+	{
+		// Return to guessing and clear out the vertical and horizontal tiles
+		if (verticalList.Count == 0)
+		{
+			currentPhase = CurrentPhase.guessing;
+			verticalList.Clear();
+			return;
+		}
+
+
+		// Choose a random tile on the four list
+		int randomPotentialTile = Random.Range(0, verticalList.Count);
+		potentialTile = verticalList[randomPotentialTile];
+
+		// Home the bomb to the target
+
+		enemyBomb.targetPosition = potentialTile.transform;
+		bombTargetHeight.position = new Vector3(potentialTile.transform.position.x, 10, potentialTile.transform.position.z);
+
+
+
+		// Remove the missed tiles on the whole player board too
+		playerTiles.Remove(potentialTile);
+
+
+		print("GUESS VERTICAL Removed:	" + verticalList[randomPotentialTile]);
+		// Remove the tile missed tile
+		verticalList.RemoveAt(randomPotentialTile);
+
 	}
 
 	// Method to call when a hit is confirmed (from EnemyBomb)
@@ -201,9 +231,16 @@ public class EnemyAi : MonoBehaviour
 	// Method to call when a miss occurs (from EnemyBomb)
 	public void RegisterMiss()
 	{
+		print("MISSED GUESSING AGAIN");
+
 		currentHitCount = 0; // Reset the hit count on a miss
 		currentPhase = CurrentPhase.guessing; // Return to random guessing mode
 		potentialHits.Clear(); // Clear potential hits since we are guessing again
+		verticalList.Clear(); // Clear out the vertical tiles
+
+		// Reset the initial hits too
+		initialHitObject = null;
+		nextGuessTarget = null;
 	}
 	// Lock direction based on the hits
 	private void LockDirection()
@@ -218,7 +255,6 @@ public class EnemyAi : MonoBehaviour
 		else
 		{
 			currentPhase = CurrentPhase.vertical;
-			Debug.LogWarning("TILES CLEARED ON LOCK DIRECTION");
 
 	//		GetInitialVerticalTiles();
 			GetVerticalTiles();
@@ -233,14 +269,16 @@ public class EnemyAi : MonoBehaviour
 		{
 			currentPhase = CurrentPhase.guessing;
 			potentialHits.Clear();
-			Debug.LogWarning("TILES CLEARED ON ON POTENTIAL HIT = 0");
+			verticalList.Clear();
+
+			Debug.LogWarning("TILES CLEARED RESET EMPTY");
 		}
 	}
 	public void GetInitialVerticalTiles()
 	{
 
 		// Clear the potential tiles when locked
-		potentialHits.Clear();
+	//	potentialHits.Clear();
 
 		// Define directions: Up, Down
 		Vector3[] directions = new Vector3[]
@@ -266,8 +304,6 @@ public class EnemyAi : MonoBehaviour
 				{
 					verticalList.Add(verticalTiles);
 				}
-
-
 			}
 		}
 	}
@@ -295,10 +331,9 @@ public class EnemyAi : MonoBehaviour
 			{
 				GameObject verticalTiles = hit.collider.gameObject;
 
-				// Check if the tile above or below still exist on the board
-				if (playerTiles.Contains(verticalTiles))
+				// Check if the tile above or below still exist on the board and make sure that the list doesn't containt that object already
+				if (playerTiles.Contains(verticalTiles) && !verticalList.Contains(verticalTiles))
 				{
-
 					potentialHits.Add(verticalTiles);
 					verticalList.Add(verticalTiles);
 				}
@@ -307,7 +342,6 @@ public class EnemyAi : MonoBehaviour
 				if (verticalList.Contains(potentialTile))
 				{
 					verticalList.Remove(potentialTile);
-					Debug.Log($"Removed {potentialTile.name} from vertical list.");
 				}
 			}
 		}

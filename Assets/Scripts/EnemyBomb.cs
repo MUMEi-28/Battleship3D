@@ -77,7 +77,11 @@ public class EnemyBomb : Bomb
 			// If enemy hit a tile then continue guessing
 			if (enemyAi.currentPhase == CurrentPhase.vertical)
 			{
-				enemyAi.RegisterMiss();
+				// Only go back to guessing if there are no more tiles to guess on the vertical list
+				if (enemyAi.verticalList.Count <= 0)
+				{
+					enemyAi.RegisterMiss();
+				}
 			}
 		}
 	}
