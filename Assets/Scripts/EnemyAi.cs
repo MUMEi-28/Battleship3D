@@ -230,6 +230,8 @@ public class EnemyAi : MonoBehaviour
 		if (Mathf.Abs(directionDifference.x) > Mathf.Abs(directionDifference.z))
 		{
 			currentPhase = CurrentPhase.horizontal;
+
+			GetHorizontalTiles();
 		}
 		else
 		{
@@ -252,6 +254,10 @@ public class EnemyAi : MonoBehaviour
 			horizontalList.Clear();
 
 			Debug.LogWarning("TILES CLEARED RESET EMPTY");
+
+			initialHitObject = null ;
+			nextGuessTarget= null;
+			currentHitCount = 0;
 		}
 	}
 	#endregion METHODS

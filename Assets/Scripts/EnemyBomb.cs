@@ -22,8 +22,6 @@ public class EnemyBomb : Bomb
 				tileBelow.GetComponent<Renderer>().material = shipHitMaterial;
 
 				// Set the initial object (EnemyAi)	
-			//	enemyAi.initialHitObject = tileBelow;
-
 				if (enemyAi.initialHitObject == null)
 				{
 					enemyAi.initialHitObject = tileBelow;
