@@ -28,7 +28,8 @@ public class EnemyBomb : Bomb
 				{
 					enemyAi.initialHitObject = tileBelow;
 					enemyAi.nextGuessTarget = tileBelow;
-					enemyAi.GetInitialVerticalTiles();
+			//		enemyAi.GetInitialVerticalTiles();
+			enemyAi.GetInitialHorizontalTiles();
 
 					print("SET INITIAL TILES ON NULL INITIAL HIT");
 
@@ -79,6 +80,16 @@ public class EnemyBomb : Bomb
 			{
 				// Only go back to guessing if there are no more tiles to guess on the vertical list
 				if (enemyAi.verticalList.Count <= 0)
+				{
+					enemyAi.RegisterMiss();
+				}
+			}
+
+			// If enemy hit a tile then continue guessing
+			if (enemyAi.currentPhase == CurrentPhase.horizontal)
+			{
+				// Only go back to guessing if there are no more tiles to guess on the horizontal list
+				if (enemyAi.horizontalList.Count <= 0)
 				{
 					enemyAi.RegisterMiss();
 				}

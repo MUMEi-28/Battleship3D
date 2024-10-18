@@ -31,6 +31,9 @@ public class EnemyAi : MonoBehaviour
 	public GameObject initialHitObject;
 	public GameObject nextGuessTarget; // This is the guess if either forward or backward to target
 	public List<GameObject> verticalList = new List<GameObject>();
+	public List<GameObject> horizontalList = new List<GameObject>();
+
+
 
 	public bool hitTest;
 	private void Update()
@@ -44,7 +47,7 @@ public class EnemyAi : MonoBehaviour
 			hitTest = false;
 		}
 	}
-
+	#region RANDOM GUESSING
 	// Returns the most likely tile that have a ship
 	public void GuessTile()
 	{
@@ -87,16 +90,13 @@ public class EnemyAi : MonoBehaviour
 		// Continue hitting horizontally
 		else if (currentPhase == CurrentPhase.horizontal)
 		{
-			print("Horizontal");
+			GetHorizontalTiles();
+
+			ChooseHorizontalSurroundingHit();
 		}
-		else
-		{
-			print("OTHER OUTPUT");
-		}
+
 
 	}
-
-
 
 	// Find the four surrounding tiles of the hit tile (Enemy Bomb)
 	public List<GameObject> GuessPotentialHits(GameObject hitTile)
@@ -154,6 +154,7 @@ public class EnemyAi : MonoBehaviour
 		{
 			currentPhase = CurrentPhase.guessing;
 			verticalList.Clear();
+			horizontalList.Clear();
 			return;
 		}
 
@@ -182,40 +183,17 @@ public class EnemyAi : MonoBehaviour
 			verticalList.Remove(potentialTile);
 		}
 
-		// If you hit more than 2 tiles consecutively in the same direction then continue in that direction
-	}
-	public void ChooseVerticalSurroundingHit()
-	{
-		// Return to guessing and clear out the vertical and horizontal tiles
-		if (verticalList.Count == 0)
+		// If the selected tile exists in the horizontal list, remove it from there as well
+		if (horizontalList.Contains(potentialTile))
 		{
-			currentPhase = CurrentPhase.guessing;
-			verticalList.Clear();
-			return;
+			horizontalList.Remove(potentialTile);
 		}
 
-
-		// Choose a random tile on the four list
-		int randomPotentialTile = Random.Range(0, verticalList.Count);
-		potentialTile = verticalList[randomPotentialTile];
-
-		// Home the bomb to the target
-
-		enemyBomb.targetPosition = potentialTile.transform;
-		bombTargetHeight.position = new Vector3(potentialTile.transform.position.x, 10, potentialTile.transform.position.z);
-
-
-
-		// Remove the missed tiles on the whole player board too
-		playerTiles.Remove(potentialTile);
-
-
-		print("GUESS VERTICAL Removed:	" + verticalList[randomPotentialTile]);
-		// Remove the tile missed tile
-		verticalList.RemoveAt(randomPotentialTile);
-
+		// If you hit more than 2 tiles consecutively in the same direction then continue in that direction
 	}
+	#endregion RANDOM GUESSING
 
+	#region METHODS
 	// Method to call when a hit is confirmed (from EnemyBomb)
 	public void RegisterHit()
 	{
@@ -237,6 +215,7 @@ public class EnemyAi : MonoBehaviour
 		currentPhase = CurrentPhase.guessing; // Return to random guessing mode
 		potentialHits.Clear(); // Clear potential hits since we are guessing again
 		verticalList.Clear(); // Clear out the vertical tiles
+		horizontalList.Clear();
 
 		// Reset the initial hits too
 		initialHitObject = null;
@@ -270,10 +249,46 @@ public class EnemyAi : MonoBehaviour
 			currentPhase = CurrentPhase.guessing;
 			potentialHits.Clear();
 			verticalList.Clear();
+			horizontalList.Clear();
 
 			Debug.LogWarning("TILES CLEARED RESET EMPTY");
 		}
 	}
+	#endregion METHODS
+
+	#region VERTICAL GUESSING
+	public void ChooseVerticalSurroundingHit()
+	{
+		// Return to guessing and clear out the vertical tiles
+		if (verticalList.Count == 0)
+		{
+			currentPhase = CurrentPhase.guessing;
+			verticalList.Clear();
+			return;
+		}
+
+
+		// Choose a random tile on the four list
+		int randomPotentialTile = Random.Range(0, verticalList.Count);
+		potentialTile = verticalList[randomPotentialTile];
+
+		// Home the bomb to the target
+
+		enemyBomb.targetPosition = potentialTile.transform;
+		bombTargetHeight.position = new Vector3(potentialTile.transform.position.x, 10, potentialTile.transform.position.z);
+
+
+
+		// Remove the missed tiles on the whole player board too
+		playerTiles.Remove(potentialTile);
+
+
+		print("GUESS VERTICAL Removed:	" + verticalList[randomPotentialTile]);
+		// Remove the tile missed tile	
+		verticalList.RemoveAt(randomPotentialTile);
+
+	}
+
 	public void GetInitialVerticalTiles()
 	{
 
@@ -346,11 +361,111 @@ public class EnemyAi : MonoBehaviour
 			}
 		}
 	}
+	#endregion VERTICAL GUESSING
 
-	private void HitHorizontal()
+
+
+	#region HORIZONTAL GUESSING
+	public void ChooseHorizontalSurroundingHit()
 	{
+		// Return to guessing and clear out the horizontal tiles
+		if (horizontalList.Count == 0)
+		{
+			currentPhase = CurrentPhase.guessing;
+			horizontalList.Clear();
+			return;
+		}
+
+
+		// Choose a random tile on the four list
+		int randomPotentialTile = Random.Range(0, horizontalList.Count);
+		potentialTile = horizontalList[randomPotentialTile];
+
+		// Home the bomb to the target
+
+		enemyBomb.targetPosition = potentialTile.transform;
+		bombTargetHeight.position = new Vector3(potentialTile.transform.position.x, 10, potentialTile.transform.position.z);
+
+
+		// Remove the missed tiles on the whole player board too
+		playerTiles.Remove(potentialTile);
+
+		print("GUESS HORIZONTAL Removed:	" + horizontalList[randomPotentialTile]);
+		// Remove the tile missed tile
+		horizontalList.RemoveAt(randomPotentialTile);
 
 	}
+	public void GetInitialHorizontalTiles()
+	{
+
+		// Define directions: Up, Down
+		Vector3[] directions = new Vector3[]
+		{
+			Vector3.left, 
+            Vector3.right,    
+        };
+
+		// Get the left and right tiles
+		foreach (Vector3 direction in directions)
+		{
+			RaycastHit hit;
+			Vector3 startPosition = initialHitObject.transform.position;
+
+			Debug.DrawRay(startPosition, direction, Color.green, 9999f);
+
+			if (Physics.Raycast(startPosition, direction, out hit, 1f, LayerMask.GetMask("PlayerTiles")))
+			{
+				GameObject horizontalTiles = hit.collider.gameObject;
+
+				// Check if the tile above or below still exist on the board
+				if (playerTiles.Contains(horizontalTiles))
+				{
+					horizontalList.Add(horizontalTiles);
+				}
+			}
+		}
+	}
+	private void GetHorizontalTiles()
+	{
+		// Clear the potential tiles when locked
+		potentialHits.Clear();
+
+		// Define directions: Left, Right for horizontal checking
+		Vector3[] directions = new Vector3[]
+		{
+			Vector3.left, // West
+			Vector3.right // East
+		};
+
+		// Get the forward and backward tiles
+		foreach (Vector3 direction in directions)
+		{
+			RaycastHit hit;
+			Vector3 startPosition = nextGuessTarget.transform.position;
+
+			Debug.DrawRay(startPosition, direction, Color.white, 9999f);
+
+			if (Physics.Raycast(startPosition, direction, out hit, 1f, LayerMask.GetMask("PlayerTiles")))
+			{
+				GameObject horizontalTiles = hit.collider.gameObject;
+
+				// Check if the tile above or below still exist on the board and make sure that the list doesn't containt that object already
+				if (playerTiles.Contains(horizontalTiles) && !horizontalList.Contains(horizontalTiles))
+				{
+					potentialHits.Add(horizontalTiles);
+					horizontalList.Add(horizontalTiles);
+				}
+
+				// If the selected tile exists in the horizontal list, remove it from there as well
+				if (horizontalList.Contains(potentialTile))
+				{
+					horizontalList.Remove(potentialTile);
+				}
+			}
+		}
+	}
+	#endregion
+
 }
 
 
