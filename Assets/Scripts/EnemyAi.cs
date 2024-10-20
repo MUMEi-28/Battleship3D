@@ -207,20 +207,34 @@ public class EnemyAi : MonoBehaviour
 	}
 
 	// Method to call when a miss occurs (from EnemyBomb)
-	public void RegisterMiss()
-	{
-		print("MISSED GUESSING AGAIN");
+public void RegisterMiss()
+{
+    print("MISSED GUESSING AGAIN");
+    currentHitCount = 0;
 
-		currentHitCount = 0; // Reset the hit count on a miss
-		currentPhase = CurrentPhase.guessing; // Return to random guessing mode
-		potentialHits.Clear(); // Clear potential hits since we are guessing again
-		verticalList.Clear(); // Clear out the vertical tiles
-		horizontalList.Clear();
+    // If the vertical list still has potential targets, switch to vertical phase
+    if (verticalList.Count > 0)
+    {
+        currentPhase = CurrentPhase.vertical;
+    }
+    // If the horizontal list still has potential targets, switch to horizontal phase
+    else if (horizontalList.Count > 0)
+    {
+        currentPhase = CurrentPhase.horizontal;
+    }
+    else
+    {
+        // Return to random guessing if no potential targets remain
+        currentPhase = CurrentPhase.guessing;
+        potentialHits.Clear();
+        verticalList.Clear();
+        horizontalList.Clear();
+			currentHitCount = 0;
+        initialHitObject = null;
+        nextGuessTarget = null;
+    }
+}
 
-		// Reset the initial hits too
-		initialHitObject = null;
-		nextGuessTarget = null;
-	}
 	// Lock direction based on the hits
 	private void LockDirection()
 	{
@@ -374,33 +388,39 @@ public class EnemyAi : MonoBehaviour
 	#region HORIZONTAL GUESSING
 	public void ChooseHorizontalSurroundingHit()
 	{
-		// Return to guessing and clear out the horizontal tiles
+		// Return to vertical phase if horizontal list is empty and vertical list still has items
 		if (horizontalList.Count == 0)
 		{
-			currentPhase = CurrentPhase.guessing;
-			horizontalList.Clear();
-			return;
+			if (verticalList.Count > 0)
+			{
+				currentPhase = CurrentPhase.vertical;
+				ChooseVerticalSurroundingHit();
+				return;
+			}
+			else
+			{
+				currentPhase = CurrentPhase.guessing;
+				verticalList.Clear();
+				horizontalList.Clear();
+				return;
+			}
 		}
 
-
-		// Choose a random tile on the four list
+		// Choose a random tile from the horizontal list
 		int randomPotentialTile = Random.Range(0, horizontalList.Count);
 		potentialTile = horizontalList[randomPotentialTile];
 
 		// Home the bomb to the target
-
 		enemyBomb.targetPosition = potentialTile.transform;
 		bombTargetHeight.position = new Vector3(potentialTile.transform.position.x, 10, potentialTile.transform.position.z);
 
-
-		// Remove the missed tiles on the whole player board too
+		// Remove the guessed tile from the horizontal list and playerTiles
 		playerTiles.Remove(potentialTile);
-
-		print("GUESS HORIZONTAL Removed:	" + horizontalList[randomPotentialTile]);
-		// Remove the tile missed tile
 		horizontalList.RemoveAt(randomPotentialTile);
 
+		print("GUESS HORIZONTAL Removed: " + potentialTile.name);
 	}
+
 	public void GetInitialHorizontalTiles()
 	{
 

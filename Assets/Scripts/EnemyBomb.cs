@@ -106,6 +106,8 @@ public class EnemyBomb : Bomb
 				{
 					print("TURN HORIZONTAL ON THE BIG SHIP");
 					//	print("HIT NEXT TILES ON THE BIG SHIP");
+					enemyAi.RegisterMiss();
+
 					enemyAi.currentPhase = CurrentPhase.horizontal;
 				}
 			}
@@ -125,6 +127,7 @@ public class EnemyBomb : Bomb
 				else
 				{
 					print("TURN VERTICAL ON THE BIG SHIP");
+					enemyAi.RegisterMiss();
 					enemyAi.currentPhase = CurrentPhase.vertical;
 				}
 			}

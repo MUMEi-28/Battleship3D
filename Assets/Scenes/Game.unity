@@ -60808,7 +60808,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1651412422
 Transform:
   m_ObjectHideFlags: 0
@@ -74276,6 +74276,7 @@ MonoBehaviour:
   waterSplashParticle: {fileID: 4477848689155369902, guid: 90d911afdab8dcc42a2031206209993e,
     type: 3}
   enemyAi: {fileID: 124763483}
+  shipController: {fileID: 0}
 --- !u!1 &2068472900
 GameObject:
   m_ObjectHideFlags: 0
