@@ -1202,11 +1202,11 @@ GameObject:
   - component: {fileID: 34471506}
   m_Layer: 6
   m_Name: Ship (9)
-  m_TagString: PlayerShip
+  m_TagString: Ship
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &34471505
 Transform:
   m_ObjectHideFlags: 0
@@ -1246,6 +1246,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   isCollidingWithShip: 0
+  isBigShip: 0
 --- !u!65 &34471507
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1263,7 +1264,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 3}
   m_Center: {x: 0, y: 0, z: 1}
@@ -1944,6 +1945,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   isCollidingWithShip: 0
+  isBigShip: 0
 --- !u!65 &53322401
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3072,7 +3074,7 @@ GameObject:
   - component: {fileID: 85050868}
   m_Layer: 6
   m_Name: Ship (1)
-  m_TagString: PlayerShip
+  m_TagString: Ship
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3116,6 +3118,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   isCollidingWithShip: 0
+  isBigShip: 0
 --- !u!65 &85050869
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3133,7 +3136,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 3}
   m_Center: {x: 0, y: 0, z: 1}
@@ -6371,7 +6374,7 @@ GameObject:
   - component: {fileID: 141649950}
   m_Layer: 6
   m_Name: Ship (4)
-  m_TagString: PlayerShip
+  m_TagString: Ship
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6417,6 +6420,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   isCollidingWithShip: 0
+  isBigShip: 0
 --- !u!65 &141649951
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6434,7 +6438,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 5}
   m_Center: {x: 0, y: 0, z: 2}
@@ -8280,6 +8284,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   isCollidingWithShip: 0
+  isBigShip: 0
 --- !u!54 &211745534
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10543,6 +10548,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   isCollidingWithShip: 0
+  isBigShip: 0
 --- !u!54 &294239659
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -13264,11 +13270,11 @@ GameObject:
   - component: {fileID: 377634962}
   m_Layer: 6
   m_Name: Ship (3)
-  m_TagString: PlayerShip
+  m_TagString: Ship
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &377634961
 Transform:
   m_ObjectHideFlags: 0
@@ -13309,6 +13315,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   isCollidingWithShip: 0
+  isBigShip: 0
 --- !u!65 &377634963
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13326,7 +13333,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 4}
   m_Center: {x: 0, y: 0, z: 1.5}
@@ -14126,7 +14133,7 @@ GameObject:
   - component: {fileID: 394469535}
   m_Layer: 6
   m_Name: Ship (6)
-  m_TagString: PlayerShip
+  m_TagString: Ship
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14177,6 +14184,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   isCollidingWithShip: 0
+  isBigShip: 1
 --- !u!65 &394469536
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14194,7 +14202,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 2, y: 1, z: 5}
   m_Center: {x: 0.5, y: 0, z: 2}
@@ -14672,6 +14680,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   isCollidingWithShip: 0
+  isBigShip: 0
 --- !u!65 &412568656
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15342,6 +15351,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   isCollidingWithShip: 0
+  isBigShip: 0
 --- !u!54 &433473504
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -15738,11 +15748,11 @@ GameObject:
   - component: {fileID: 450338510}
   m_Layer: 6
   m_Name: Ship (2)
-  m_TagString: PlayerShip
+  m_TagString: Ship
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &450338509
 Transform:
   m_ObjectHideFlags: 0
@@ -15783,6 +15793,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   isCollidingWithShip: 0
+  isBigShip: 0
 --- !u!65 &450338511
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15800,7 +15811,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 4}
   m_Center: {x: 0, y: 0, z: 1.5}
@@ -16890,7 +16901,7 @@ GameObject:
   - component: {fileID: 485587898}
   m_Layer: 6
   m_Name: Ship (12)
-  m_TagString: PlayerShip
+  m_TagString: Ship
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16941,6 +16952,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   isCollidingWithShip: 0
+  isBigShip: 1
 --- !u!65 &485587899
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16958,7 +16970,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 2, y: 1, z: 5}
   m_Center: {x: 0.5, y: 0, z: 2}
@@ -17405,6 +17417,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   isCollidingWithShip: 0
+  isBigShip: 0
 --- !u!65 &496680034
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20050,7 +20063,7 @@ GameObject:
   - component: {fileID: 562387291}
   m_Layer: 6
   m_Name: Ship (12)
-  m_TagString: PlayerShip
+  m_TagString: Ship
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20101,6 +20114,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   isCollidingWithShip: 0
+  isBigShip: 1
 --- !u!65 &562387292
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20118,7 +20132,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 2, y: 1, z: 5}
   m_Center: {x: 0.5, y: 0, z: 2}
@@ -20208,6 +20222,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   isCollidingWithShip: 0
+  isBigShip: 0
 --- !u!65 &564574902
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22021,11 +22036,11 @@ GameObject:
   - component: {fileID: 614209332}
   m_Layer: 6
   m_Name: Ship (11)
-  m_TagString: PlayerShip
+  m_TagString: Ship
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &614209331
 Transform:
   m_ObjectHideFlags: 0
@@ -22068,6 +22083,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   isCollidingWithShip: 0
+  isBigShip: 0
 --- !u!65 &614209333
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22085,7 +22101,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 6}
   m_Center: {x: 0, y: 0, z: 0.5}
@@ -23604,11 +23620,11 @@ GameObject:
   - component: {fileID: 674945512}
   m_Layer: 6
   m_Name: Ship (8)
-  m_TagString: PlayerShip
+  m_TagString: Ship
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &674945511
 Transform:
   m_ObjectHideFlags: 0
@@ -23650,6 +23666,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   isCollidingWithShip: 0
+  isBigShip: 0
 --- !u!65 &674945513
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23667,7 +23684,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 5}
   m_Center: {x: 0, y: 0, z: 2}
@@ -24080,7 +24097,7 @@ GameObject:
   - component: {fileID: 689209890}
   m_Layer: 6
   m_Name: Ship (8)
-  m_TagString: PlayerShip
+  m_TagString: Ship
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24126,6 +24143,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   isCollidingWithShip: 0
+  isBigShip: 0
 --- !u!65 &689209891
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24143,7 +24161,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 5}
   m_Center: {x: 0, y: 0, z: 2}
@@ -26806,11 +26824,11 @@ GameObject:
   - component: {fileID: 738558895}
   m_Layer: 6
   m_Name: Ship (10)
-  m_TagString: PlayerShip
+  m_TagString: Ship
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &738558894
 Transform:
   m_ObjectHideFlags: 0
@@ -26851,6 +26869,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   isCollidingWithShip: 0
+  isBigShip: 0
 --- !u!65 &738558896
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26868,7 +26887,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 4}
   m_Center: {x: 0, y: 0, z: 1.5}
@@ -31667,7 +31686,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &862631161
 Transform:
   m_ObjectHideFlags: 0
@@ -36658,11 +36677,11 @@ GameObject:
   - component: {fileID: 997363544}
   m_Layer: 6
   m_Name: Ship (11)
-  m_TagString: PlayerShip
+  m_TagString: Ship
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &997363543
 Transform:
   m_ObjectHideFlags: 0
@@ -36705,6 +36724,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   isCollidingWithShip: 0
+  isBigShip: 0
 --- !u!65 &997363545
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36722,7 +36742,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 6}
   m_Center: {x: 0, y: 0, z: 0.5}
@@ -37647,7 +37667,7 @@ GameObject:
   - component: {fileID: 1012410283}
   m_Layer: 6
   m_Name: Ship (7)
-  m_TagString: PlayerShip
+  m_TagString: Ship
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37692,6 +37712,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   isCollidingWithShip: 0
+  isBigShip: 0
 --- !u!65 &1012410284
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -37709,7 +37730,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 4}
   m_Center: {x: 0, y: 0, z: 1.5}
@@ -42947,6 +42968,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   isCollidingWithShip: 0
+  isBigShip: 0
 --- !u!65 &1178661841
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -44079,6 +44101,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   isCollidingWithShip: 0
+  isBigShip: 0
 --- !u!65 &1217610184
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -47636,11 +47659,11 @@ GameObject:
   - component: {fileID: 1326359306}
   m_Layer: 6
   m_Name: Ship (9)
-  m_TagString: PlayerShip
+  m_TagString: Ship
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1326359305
 Transform:
   m_ObjectHideFlags: 0
@@ -47680,6 +47703,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   isCollidingWithShip: 0
+  isBigShip: 0
 --- !u!65 &1326359307
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -47697,7 +47721,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 3}
   m_Center: {x: 0, y: 0, z: 1}
@@ -51195,11 +51219,11 @@ GameObject:
   - component: {fileID: 1434808946}
   m_Layer: 6
   m_Name: Ship (2)
-  m_TagString: PlayerShip
+  m_TagString: Ship
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1434808945
 Transform:
   m_ObjectHideFlags: 0
@@ -51240,6 +51264,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   isCollidingWithShip: 0
+  isBigShip: 0
 --- !u!65 &1434808947
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -51257,7 +51282,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 4}
   m_Center: {x: 0, y: 0, z: 1.5}
@@ -51368,6 +51393,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   isCollidingWithShip: 0
+  isBigShip: 0
 --- !u!54 &1442912056
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -54458,7 +54484,7 @@ GameObject:
   - component: {fileID: 1515372163}
   m_Layer: 6
   m_Name: Ship (10)
-  m_TagString: PlayerShip
+  m_TagString: Ship
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -54503,6 +54529,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   isCollidingWithShip: 0
+  isBigShip: 0
 --- !u!65 &1515372164
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -54520,7 +54547,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 4}
   m_Center: {x: 0, y: 0, z: 1.5}
@@ -55977,6 +56004,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   isCollidingWithShip: 0
+  isBigShip: 0
 --- !u!54 &1554292200
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -56650,6 +56678,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   isCollidingWithShip: 0
+  isBigShip: 0
 --- !u!54 &1567817206
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -59872,11 +59901,11 @@ GameObject:
   - component: {fileID: 1631720433}
   m_Layer: 6
   m_Name: Ship (3)
-  m_TagString: PlayerShip
+  m_TagString: Ship
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1631720432
 Transform:
   m_ObjectHideFlags: 0
@@ -59917,6 +59946,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   isCollidingWithShip: 0
+  isBigShip: 0
 --- !u!65 &1631720434
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -59934,7 +59964,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 4}
   m_Center: {x: 0, y: 0, z: 1.5}
@@ -60774,7 +60804,7 @@ GameObject:
   - component: {fileID: 1651412423}
   m_Layer: 6
   m_Name: Ship (6)
-  m_TagString: PlayerShip
+  m_TagString: Ship
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -60825,6 +60855,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   isCollidingWithShip: 0
+  isBigShip: 1
 --- !u!65 &1651412424
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -60842,7 +60873,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 2, y: 1, z: 5}
   m_Center: {x: 0.5, y: 0, z: 2}
@@ -61359,11 +61390,11 @@ GameObject:
   - component: {fileID: 1675886416}
   m_Layer: 6
   m_Name: Ship (7)
-  m_TagString: PlayerShip
+  m_TagString: Ship
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1675886415
 Transform:
   m_ObjectHideFlags: 0
@@ -61404,6 +61435,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   isCollidingWithShip: 0
+  isBigShip: 0
 --- !u!65 &1675886417
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -61421,7 +61453,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 4}
   m_Center: {x: 0, y: 0, z: 1.5}
@@ -61733,11 +61765,11 @@ GameObject:
   - component: {fileID: 1686858337}
   m_Layer: 6
   m_Name: Ship (1)
-  m_TagString: PlayerShip
+  m_TagString: Ship
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1686858336
 Transform:
   m_ObjectHideFlags: 0
@@ -61777,6 +61809,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   isCollidingWithShip: 0
+  isBigShip: 0
 --- !u!65 &1686858338
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -61794,7 +61827,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 3}
   m_Center: {x: 0, y: 0, z: 1}
@@ -64972,11 +65005,11 @@ GameObject:
   - component: {fileID: 1782456505}
   m_Layer: 6
   m_Name: Ship (5)
-  m_TagString: PlayerShip
+  m_TagString: Ship
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1782456504
 Transform:
   m_ObjectHideFlags: 0
@@ -65019,6 +65052,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   isCollidingWithShip: 0
+  isBigShip: 0
 --- !u!65 &1782456506
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -65036,7 +65070,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 6}
   m_Center: {x: 0, y: 0, z: 0.5}
@@ -69035,11 +69069,11 @@ GameObject:
   - component: {fileID: 1919950226}
   m_Layer: 6
   m_Name: Ship (5)
-  m_TagString: PlayerShip
+  m_TagString: Ship
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1919950225
 Transform:
   m_ObjectHideFlags: 0
@@ -69082,6 +69116,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   isCollidingWithShip: 0
+  isBigShip: 0
 --- !u!65 &1919950227
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -69099,7 +69134,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 6}
   m_Center: {x: 0, y: 0, z: 0.5}
@@ -77178,7 +77213,7 @@ GameObject:
   - component: {fileID: 2134852702}
   m_Layer: 6
   m_Name: Ship (4)
-  m_TagString: PlayerShip
+  m_TagString: Ship
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -77224,6 +77259,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   isCollidingWithShip: 0
+  isBigShip: 0
 --- !u!65 &2134852703
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -77241,7 +77277,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 5}
   m_Center: {x: 0, y: 0, z: 2}

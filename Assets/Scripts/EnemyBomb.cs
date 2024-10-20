@@ -5,8 +5,20 @@ using UnityEngine;
 public class EnemyBomb : Bomb
 {
 	public EnemyAi enemyAi;
+	public ShipController shipController;
+
 	private void OnTriggerEnter(Collider other)
 	{
+		if (other.CompareTag("Ship"))
+		{
+			shipController = other.GetComponent<ShipController>();
+
+			if (shipController.isBigShip)
+			{
+				print("HIT BIG SHIP");
+			}
+		}
+
 		// If the bomb hits an EnemyShip
 		if (other.CompareTag("PlayerShip"))
 		{
@@ -26,11 +38,10 @@ public class EnemyBomb : Bomb
 				{
 					enemyAi.initialHitObject = tileBelow;
 					enemyAi.nextGuessTarget = tileBelow;
-			//		enemyAi.GetInitialVerticalTiles();
-			enemyAi.GetInitialHorizontalTiles();
+					enemyAi.GetInitialVerticalTiles();
+					enemyAi.GetInitialHorizontalTiles();
 
 					print("SET INITIAL TILES ON NULL INITIAL HIT");
-
 				}
 				else
 				{
@@ -48,16 +59,21 @@ public class EnemyBomb : Bomb
 				enemyAi.currentPhase = CurrentPhase.shipHit;
 			}
 
-			
+
 
 			// Reset the bomb
 			ResetBomb();
 
 
+
 			// Add hit count to find out if the ship is vertical or horizontal
 			enemyAi.RegisterHit();
 
-			enemyAi.ResetGuessOnEmptyTile();
+
+			if (!shipController.isBigShip)
+			{
+				enemyAi.ResetGuessOnEmptyTile();
+			}
 
 		}
 		// If the bomb directly hits a TargetTile without hitting a ship
@@ -73,25 +89,50 @@ public class EnemyBomb : Bomb
 			// Reset the bomb
 			ResetBomb();
 
+
 			// If enemy hit a tile then continue guessing
 			if (enemyAi.currentPhase == CurrentPhase.vertical)
 			{
-				// Only go back to guessing if there are no more tiles to guess on the vertical list
-				if (enemyAi.verticalList.Count <= 0)
+				// Clear only if the ship is not big
+				if (!shipController.isBigShip)
 				{
-					enemyAi.RegisterMiss();
+					// Only go back to guessing if there are no more tiles to guess on the vertical list
+					if (enemyAi.verticalList.Count <= 0)
+					{
+						enemyAi.RegisterMiss();
+					}
+				}
+				else
+				{
+					print("TURN HORIZONTAL ON THE BIG SHIP");
+					//	print("HIT NEXT TILES ON THE BIG SHIP");
+					enemyAi.currentPhase = CurrentPhase.horizontal;
 				}
 			}
 
 			// If enemy hit a tile then continue guessing
 			if (enemyAi.currentPhase == CurrentPhase.horizontal)
 			{
-				// Only go back to guessing if there are no more tiles to guess on the horizontal list
-				if (enemyAi.horizontalList.Count <= 0)
+				// Clear only if the ship is not big
+				if (!shipController.isBigShip)
 				{
-					enemyAi.RegisterMiss();
+					// Only go back to guessing if there are no more tiles to guess on the horizontal list
+					if (enemyAi.horizontalList.Count <= 0)
+					{
+						enemyAi.RegisterMiss();
+					}
+				}
+				else
+				{
+					print("TURN VERTICAL ON THE BIG SHIP");
+					enemyAi.currentPhase = CurrentPhase.vertical;
 				}
 			}
 		}
+
 	}
 }
+
+
+
+

@@ -13,6 +13,7 @@ public class ShipController : MonoBehaviour
 	public LayerMask shipMask;
 	public bool isCollidingWithShip = false;
 
+	public bool isBigShip = false;
 
 	private void Start()
 	{
